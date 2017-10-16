@@ -197,17 +197,23 @@
                 android:id="@+id/TeamId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.37"
                 android:text="Team4Success"
                 android:textColor="#129999"
                 android:textSize="24sp"
                 android:textStyle="italic" />
 
             <Button
+                android:id="@+id/buttonDot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="." />
+
+            <Button
                 android:id="@+id/buttonDiv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.14"
+                android:layout_weight="0.01"
                 android:text="/" />
         </LinearLayout>
 

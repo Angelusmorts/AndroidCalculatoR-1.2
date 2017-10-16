@@ -20,7 +20,7 @@ import static com.example.freaksoul.androidcalculator.R.id.textView1;
 public class MainActivity extends AppCompatActivity {
     TextView textView1;
     Button buttonOne, buttonTwo, buttonThree, buttonFour, buttonFive, buttonSix, buttonSeven, buttonEight, buttonNine, buttonZero;
-    Button buttonMul, buttonSum, buttonDiff, buttonDiv, buttonResult, buttonClear;
+    Button buttonMul, buttonSum, buttonDiff, buttonDiv, buttonResult, buttonClear, buttonDot;
     String buttonValue = "";
     Double Answer;
     Double val1 = 0.0;
@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         buttonDiv = (Button) findViewById(R.id.buttonDiv);
         buttonResult = (Button) findViewById(R.id.buttonResult);
         buttonClear = (Button) findViewById(R.id.buttonClear);
+        buttonDot = (Button) findViewById(R.id.buttonDot);
 
         buttonZero.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -258,6 +259,17 @@ public class MainActivity extends AppCompatActivity {
 
                 }
 
+            }
+        });
+        buttonDot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (solved == true || solvedWithouEqu == true) {
+                    textView1.setText("");
+                    solved = false;
+                    solvedWithouEqu = false;
+                }
+                textView1.setText(textView1.getText().toString() + buttonDot.getText().toString());
             }
         });
         buttonResult.setOnClickListener(new View.OnClickListener() {
